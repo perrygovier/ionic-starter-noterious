@@ -1,0 +1,413 @@
+
+.app-wrap {
+    border: 10px solid #f5ead9;
+    min-height: 100%;
+    padding: 10px;
+}
+.nav-wrap {
+    height:65px;
+}
+
+.color-picker-wrap {
+    position: fixed;
+    right: 20px;
+    background: #f5ead9;
+    width: 270px;
+    padding: 10px;
+    height: 70px;
+}
+.color-picker-wrap.expanded {
+    bottom: 0;
+}
+.color-picker-wrap.collapsed {
+    bottom: -60px;
+}
+.color-picker-toggle {
+    position: absolute;
+    background: #f5ead9;
+    height: 50px;
+    top: -50px;
+    width: 50px;
+    right: 0px;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+.color-picker {
+    display: inline;
+    list-style-type: none;
+    padding:0;
+}
+
+ul.color-picker li {
+  float: left;
+  margin: 0 5px;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.square.blue {
+    background-color: #4f92a8;
+}
+
+.square.green {
+    background-color: #87a961;
+}
+
+.square.orange {
+    background-color: #f6512d;
+}
+
+.square.red {
+    background-color: #a93d41;
+}
+
+.square.yellow {
+    background-color: #f4cb48;
+}
+
+.bg-blue {
+    background-color: #4f92a8;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 0.5s ease;
+}
+
+.bg-green {
+    background-color: #87a961;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 0.5s ease;
+}
+
+
+.bg-orange {
+    background-color: #f6512d;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 0.5s ease;
+}
+
+
+.bg-red {
+    background-color: #a93d41;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 0.5s ease;
+}
+
+
+.bg-yellow {
+    background-color: #f4cb48;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-clear button:hover.blue,
+.navbar-clear a:hover.blue {
+    color: #4f92a8;
+}
+
+.navbar-clear button:hover.green,
+.navbar-clear a:hover.green {
+    color: #87a961;
+}
+
+.navbar-clear button:hover.orange,
+.navbar-clear a:hover.orange {
+    color: #f6512d;
+}
+
+.navbar-clear button:hover.red,
+.navbar-clear a:hover.red {
+    color: #a93d41;
+}
+
+.navbar-clear button:hover.yellow,
+.navbar-clear a:hover.yellow {
+    color: #f4cb48;
+}
+ul.nav li a.btn {
+    text-align: left;
+}
+
+input:focus, textarea { outline: none !important; }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.navbar-clear {
+    background: rgb(255, 255, 255); /* Fall-back for browsers that don't support rgba */
+    background: rgba(255, 255, 255, 0);
+}
+
+.navbar-clear a,
+.navbar-clear button {
+    color: #f5ead9;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-clear button {
+    padding-top: 15px;
+    padding-bottom: 18px;
+}
+
+.navbar-clear .icon-bar {
+    background-color: #f5ead9;
+}
+
+.navbar-clear .nav>li>a:hover, .navbar-clear .nav>li>a:focus,
+.navbar-clear .nav>li>button:hover, .navbar-clear .nav>li>button:focus {
+    text-decoration: none;
+    background: rgba(245, 234, 217, .6);
+}
+.collapsing, .collapse.in {
+    z-index: 2;
+    position: relative;
+    border: 10px solid #f5ead9;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba(245, 234, 217, .6);
+                url('/assets/img/loader.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+.note-header {
+    margin-left: 10px;
+}
+
+.content {
+    display: table;
+    width: 100%;
+    height: calc(100% - 65px);
+}
+.login-wrap {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+
+a.view {
+    color: #333;
+}
+
+a.view:hover, a.view:focus {
+    color: #333;
+}
+
+.x-small {
+    color: #333333;
+    font-size: 11px;
+}
+
+.medium {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.large {
+    color: #f5ead9;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content fieldset {
+    border: none;
+    position: relative;
+}
+
+.content .board {
+    min-height: 200px;
+    max-width: 290px;
+    width: 100%;
+    margin:20px auto;
+    padding: 20px;
+    background: #f5ead9;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.content .note {
+    min-height: 200px;
+    max-width: 290px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f5ead9;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.content .board fieldset, .content .note fieldset {
+    border: none;
+}
+
+.edit input[type=text], .edit textarea {
+    color: #333333;
+    border: 1px solid #f5ead9;
+    width: 100%;
+    resize: none;
+    background-color: #f5ead9;
+}
+
+.create input[type=text], .create textarea {
+    color: #a69f95;
+    border: 1px solid #d7cebf;
+    width: 100%;
+    resize: none;
+    background-color: #f5ead9;
+}
+
+.edit input[type=text]:hover, .edit textarea:hover,
+.edit input[type=text]:focus, .edit textarea:focus {
+  border: 1px solid #d7cebf;
+}
+
+.create fieldset > * {
+    margin: 2px 0;
+}
+
+.create form {
+    margin: 0px;
+}
+
+.form-signin {
+    min-height: 200px;
+    width: 100%;
+    max-width: 360px;
+    min-height: 220px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    padding-top: 34px;
+    background: #f5ead9;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.form-signin button {
+    background:none;
+    border:none;
+    box-shadow:none;
+}
+
+.form-signin button:hover {
+    background:none;
+    border:none;
+    box-shadow:none;
+}
+
+.form-signin .large {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-signin input[type=text],
+.form-signin input[type=email],
+.form-signin input[type=password],
+.create textarea {
+    color: #a69f95;
+    border: 1px solid #d7cebf;
+    width: 100%;
+    resize: none;
+    background-color: #f5ead9;
+    margin-bottom: 5px;
+}
+
+.boards,
+.notes {
+    margin-top: 20px;
+    padding: 0;
+    background: #f5ead9;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.board-header span {
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.board-details,
+.note-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f5ead9;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.simple-board,
+.simple-note {
+    cursor: pointer;
+    border-bottom: 1px #CCC solid;
+    border-left: 1px #CCC solid;
+    border-right: 1px #CCC solid;
+    margin: 0px;
+    padding: 10px;
+}
+
+.bottom-right-corner {
+    position: absolute;
+    bottom: -85px;
+    right: -10px;
+}
+.bottom-right-corner-note {
+  position: absolute;
+  bottom: -70px;
+  right: -10px;
+}
+.arrow-bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.simple-board:last-child,
+.simple-note:last-child {
+    border-bottom: 1px #CCC solid;
+}
+
+.active {
+    background: #FFF;
+}
+
+.faded {
+    opacity: 0.3;
+}

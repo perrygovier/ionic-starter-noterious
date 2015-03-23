@@ -1,0 +1,50 @@
+<ion-view view-title="Please Sign In">
+  <ion-content>
+    <form
+      class="list"
+      role="form"
+      name="login.loginForm"
+      ng-submit="login.submit(login.user, login.loginForm.$valid, login.user.register)"
+      novalidate>
+
+      <div class="alert alert-danger" ng-if="login.error" role="alert">
+        <p>{{login.error}}</p>
+      </div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Enter Email</span>
+        <input
+            type="email"
+            ng-model="login.user.email"
+            name="email"
+            placeholder="Enter Email"
+            required>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Enter Password</span>
+        <input
+            type="password"
+            ng-model="login.user.password"
+            placeholder="Enter Password"
+            required>
+      </label>
+
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox"
+                 ng-model="login.user.register">
+        </label>
+        New User?
+      </div>
+
+      <button type="submit"
+              ng-disabled="login.loading"
+              class="button button-block button-positive">
+        Sign In
+      </button>
+      <ion-spinner ng-show="login.loading"></ion-spinner>
+    </form>
+
+  </ion-content>
+</ion-view>

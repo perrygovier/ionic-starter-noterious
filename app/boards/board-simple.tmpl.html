@@ -1,0 +1,16 @@
+<div>
+
+
+  <h3 class="item item-icon-right">
+    {{ board.title }}
+    <i class="icon ion-ios-close assertive"
+        ng-click="ctrl.deleteBoard(boardId)">
+    </i>
+  </h3>
+
+  <p class="item">{{ board.description }}</p>
+  <a class="button button-full button-positive item"
+     ui-sref="notes({ boardId: boardId })">
+    Notes
+  </a>
+</div>
