@@ -1,2 +1,2 @@
-# ionic-starter-notorious
-A starter that demonstrates firebase integration with @simpulton's notorious app
+# ionic-starter-noterious
+A starter that demonstrates firebase integration with @simpulton's noterious app
