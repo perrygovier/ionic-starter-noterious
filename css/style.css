@@ -4,3 +4,6 @@ ion-spinner{
   margin:0 auto;
   padding:5px;
 }
+.navbar-brand img{
+  padding-top:8px;
+}
